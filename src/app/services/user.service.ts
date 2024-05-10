@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Login } from '../common/Login';
 import { User } from '../common/User';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  url = 'http://localhost:9090/api/users';
-  urlAuthentication = 'http://localhost:9090/api';
+  url = environment.apiURL + '/api/users';
+  urlAuthentication = environment.apiURL + '/api';
   constructor(private httpClient: HttpClient) { }
 
   getAll() {

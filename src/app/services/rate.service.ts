@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RateService {
 
-  url = 'http://localhost:9090/api/rates';
+  url = environment.apiURL + '/api/rates';
 
   constructor(private httpClient: HttpClient) { }
 

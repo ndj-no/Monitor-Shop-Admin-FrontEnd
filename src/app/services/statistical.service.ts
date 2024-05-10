@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StatisticalService {
 
-  url = 'http://localhost:9090/api/statistical';
+  url = environment.apiURL + '/api/statistical';
 
   constructor(private httpClient: HttpClient) { }
 
