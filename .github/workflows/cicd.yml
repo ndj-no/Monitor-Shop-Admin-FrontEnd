@@ -20,7 +20,7 @@ jobs:
           context: .
           file: ./Dockerfile
           build-args: BUILD_MODE=production
-          tags: mshop/front-end:latest
+          tags: mshop/${{ env.SERVICE }}:latest
 
   deploy:
     needs: build
